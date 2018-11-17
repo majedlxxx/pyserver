@@ -80,10 +80,7 @@ def work(client,addr):
 	send(client,"working")
 
 	#no need to modify
-	try:
-		client.close()
-	except:
-		pass
+	client.close()
 
 
 
