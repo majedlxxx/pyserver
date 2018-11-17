@@ -67,6 +67,7 @@ def end():
 				removeClient(client)
 				break
 			if time.time()-client[0]> TimeLimitPerClient:
+				send(client[1],"time limit reached")
 				client[1].shutdown(socket.SHUT_RDWR)
 				removeClient(client)
 				break
