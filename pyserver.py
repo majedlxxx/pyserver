@@ -88,6 +88,7 @@ def work(client,addr):
 if __name__=='__main__':
 	s=socket.socket()
 	s.bind((IP,Port))
+	s..setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 	s.listen(100)
 	logToFile("The server is running at port: "+str(Port)+"\n*****\n")
 	terminator=threading.Thread(target=end)
